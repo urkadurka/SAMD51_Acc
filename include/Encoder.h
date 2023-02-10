@@ -9,10 +9,12 @@
 
 #define SEESAW_ADDR 0x36
 
-static int iPaolo=0;
-
 static Adafruit_seesaw ss;
 static seesaw_NeoPixel sspixel = seesaw_NeoPixel(1, SS_NEOPIX, NEO_GRB + NEO_KHZ800);
+
+static bool bNewEncPosition;
+static uint32_t i32EncPosition;
+static uint8_t ui8EncSwitchValue;
 
 void Setup_Encoder(void);
 

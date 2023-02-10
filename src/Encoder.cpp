@@ -7,7 +7,7 @@ int32_t encoder_position;
 
 void Setup_Encoder(void){
 
-Serial.println("Looking for seesaw!");
+  Serial.println("Looking for seesaw!");
   
   if (! ss.begin(SEESAW_ADDR) || ! sspixel.begin(SEESAW_ADDR)) {
     Serial.println("Couldn't find seesaw on default address");
@@ -37,5 +37,9 @@ Serial.println("Looking for seesaw!");
   delay(10);
   ss.setGPIOInterrupts((uint32_t)1 << SS_SWITCH, 1);
   ss.enableEncoderInterrupt();
+
+  i32EncPosition = 0;
+  bNewEncPosition = false;
+  ui8EncSwitchValue = 1;
 
 }

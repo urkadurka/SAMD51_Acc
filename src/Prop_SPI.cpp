@@ -24,14 +24,9 @@ void SPI_CS(uint8_t ui18CS, uint8_t ui8Level ){
   // cambia qualcosa
 }
 
-
-
-
 void setupMySPI(void){
-  //uint16_t ui16Receive, ui16Transmit = 0x80, ui16Res=0;
-  uint16_t ui16Res=0;
   //uint8_t ui8Prefix, ui8Data, ui8Receive, ui8Low, ui8High;
-  uint8_t ui8Low, ui8High;
+  uint8_t ui8Low;
   MySPI.begin();
   pinPeripheral(10, PIO_SERCOM);  // MISO
   pinPeripheral(12, PIO_SERCOM);  // MOSI
